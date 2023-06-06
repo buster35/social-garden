@@ -16,12 +16,11 @@ const Header = () => {
           <Navbar.Collapse id="basic-navbar-nav">
 
             {/* Add the activeKey code below and the rest should work  */}
-            <Nav className="me-auto" activeKey={window.location.pathname}>
+            <Nav className="me-auto" activeKey={window.location.pathname}>  
               <li><Nav.Link href="/">Home</Nav.Link></li>
-
               { currUser.status === "notfound" && (
                 <>
-                  <li><Nav.Link href="/signup">Signup Page</Nav.Link></li>
+
                   <li><Nav.Link href="/login">Login Page</Nav.Link></li>
                 </>
               )}
