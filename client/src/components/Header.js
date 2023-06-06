@@ -1,3 +1,4 @@
+import './header.css'
 import { useState } from "react"
 import { useUserContext } from "../ctx/UserContext"
 import { Navbar, Nav } from "react-bootstrap";
