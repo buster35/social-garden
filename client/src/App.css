@@ -8,13 +8,13 @@
 .App-home {
   border: 2 px, solid #344E41;
 }
-.Home-weather-container {
+.Home-weather {
   border: 2 px, solid #344E41;
 }
-.Home-chat-container {
+.Home-chat {
   border: 2 px, solid #344E41;
 }
-.Home-upload-container {
+.Home-upload {
   border: 2 px, solid #344E41;
 }
 .container {
@@ -28,9 +28,3 @@
   display: flex;
   padding: 30px;
 }
-/* .login {
-  padding: 10px;
-}
-.signup {
-  padding: 10px;
-} */
