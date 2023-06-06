@@ -8,6 +8,7 @@ export const UserProvider = ({ children }) => {
   const [ currUser, setCurrUser ] = useState({ status: "searching", data: null })
 
   const verifyUser = async() => {
+    console.log("checking user")
     setCurrUser({ status: "searching", data: null })
     if( Cookies.get("auth-cookie") ){
       try {
@@ -19,6 +20,7 @@ export const UserProvider = ({ children }) => {
           }
         })
         const result = await query.json()
+        console.log(result)
         if( result && result.status === "success" ){
           setCurrUser({ status: "found", data: result.payload })
         } else {
@@ -30,6 +32,8 @@ export const UserProvider = ({ children }) => {
           window.location.href = "/login"
         }
       }
+    } else {
+      setCurrUser({ status: "notfound" })
     }
   }
 
