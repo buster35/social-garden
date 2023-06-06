@@ -1,3 +1,13 @@
 .gardenlogo {
-  height: 200px;
+  max-height: 200px;
+  max-width: 15%;
+}
+
+.socialgarden {
+  justify-content: center;
+  max-width: 50%;
+}
+
+header {
+  background-color: #588157;
 }
