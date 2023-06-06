@@ -1,4 +1,4 @@
-
+import './weather.css'
 
 
 function Weather() {
