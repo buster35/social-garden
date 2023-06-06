@@ -10,12 +10,12 @@ module.exports = {
     try{
       const user = await User.create(body);
       const { password, ...modifiedUser } = user;
-
+      
       const token = jwt.sign({
         email: user.email,
         id: user._id
       }, process.env.JWT_SECRET)
-  
+      
       res.cookie("auth-cookie", token).json({ status: "success", payload: modifiedUser })
     } catch(err){
       return res.status(400).json({ status: "error", msg: `Error creating user: ${err.message}` });

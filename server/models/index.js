@@ -1,4 +1,5 @@
 const User = require('./User');
-const ToDoItem = require('./ToDoItem');
+const Post = require('./Post');
+const Reaction = require('./Reaction')
 
-module.exports = { User, ToDoItem };
+module.exports = { User, Post, Reaction };
