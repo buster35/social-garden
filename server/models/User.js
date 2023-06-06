@@ -2,26 +2,38 @@ const { Schema, model } = require('mongoose');
 const bcrypt = require("bcrypt")
 
 const userSchema = new Schema({
-  fname: { 
-    type: String, 
-    required: true 
+    // Should we use fname lname or just username? Should decide with the group
+    username: { 
+      type: String, 
+      required: true 
+    },
+    email: {
+      type: String,
+      required: true,
+    },
+    password: {
+      type: String,
+      required: true
+    },
+    post: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Post'
+      }
+    ],
+    friend: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+      }
+    ]
   },
-
-  lname: {
-    type: String,
-    required: true
-  },
-
-  email: {
-    type: String,
-    required: true,
-  },
-
-  password: {
-    type: String,
-    required: true
+  {
+    toJSON: {
+      getters: true,
+    },
   }
-});
+);
 
 userSchema.method("verify", async function(pw){
   return await bcrypt.compare(pw, this.password)
