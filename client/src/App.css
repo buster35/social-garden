@@ -1,0 +1,22 @@
+.App {
+  color: #344E41;
+}
+.App-profile {
+  border: 1 px, solid #344E41;
+}
+
+.App-home {
+  border: 2 px, solid #344E41;
+}
+.Home-weather-container {
+  border: 2 px, solid #344E41;
+}
+.Home-chat-container {
+  border: 2 px, solid #344E41;
+}
+.Home-upload-container {
+  border: 2 px, solid #344E41;
+}
+.container {
+  border: 2px, solid #344E41 ;
+}

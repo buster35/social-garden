@@ -5,7 +5,7 @@ import { UserProvider } from "./ctx/UserContext";
 import { HomePage, LoginPage } from "./pages";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./styles/global.css";
+import "./App.css";
 
 function App() {
   return (

@@ -5,6 +5,7 @@ function Chat() {
 
   return (
       <>
+      <h5>Chat</h5>
       </>
   );
 }
