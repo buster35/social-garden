@@ -2,7 +2,7 @@ import "./signup.css";
 import { useState } from "react";
 
 const SignupPage = (props) => {
-  const defForm = { fname: "", lname: "", email: "", password: "" };
+  const defForm = { username: "", email: "", password: "" };
   const [formData, setFormData] = useState(defForm);
   const [signupResult, setSignupResult] = useState("");
 
@@ -36,25 +36,13 @@ const SignupPage = (props) => {
 
       <form className="form mb-3">
         <div className="form-group mb-3">
-          <label>First Name</label>
+          <label>Username</label>
           <input
             type="text"
-            name="fname"
+            name="username"
             placeholder="John"
             className="form-control"
-            value={formData.fname}
-            onChange={handleInputChange}
-          />
-        </div>
-
-        <div className="form-group mb-3">
-          <label>Last Name</label>
-          <input
-            type="text"
-            name="lname"
-            placeholder="Doe"
-            className="form-control"
-            value={formData.lname}
+            value={formData.username}
             onChange={handleInputChange}
           />
         </div>
