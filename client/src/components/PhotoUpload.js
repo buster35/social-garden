@@ -11,7 +11,7 @@ const PhotoUpload = () => {
       <h5>Photo Upload</h5>
 
         {selectedImage && (
-          <div>
+          <div className='photo'>
             <img
               alt="not found"
               width={"250px"}
