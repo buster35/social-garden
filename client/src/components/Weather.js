@@ -1,13 +1,16 @@
-import './weather.css'
+import "./weather.css";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 function Weather() {
   const [city, setCity] = useState("");
   const [weatherData, setWeatherData] = useState(null);
-
+  console.log(weatherData);
   useEffect(() => {
-    axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=c82064eb7e58f2184dc24d4908b28cf9&units=imperial`)
+    axios
+      .get(
+        `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=c82064eb7e58f2184dc24d4908b28cf9&units=imperial`
+      )
       .then((response) => {
         setWeatherData(response.data);
       })
@@ -63,11 +66,7 @@ function Weather() {
       );
     });
 
-    return (
-      <div class="three-day">
-        {html}
-      </div>
-    );
+    return <div class="three-day">{html}</div>;
   };
 
   return (
@@ -77,11 +76,11 @@ function Weather() {
         placeholder="City"
         onChange={(e) => setCity(e.target.value)}
       />
-      <button onClick={getWeather}>Get Weather</button>
+      <button onClick={setWeatherData}>Get Weather</button>
       {showWeather()}
       {showThreeDay()}
     </div>
   );
 }
 
-export default Weather
+export default Weather;
