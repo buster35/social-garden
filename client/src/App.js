@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Header, Footer } from "./components";
 import { UserProvider } from "./ctx/UserContext";
-import { HomePage, LoginPage, ProfilePage } from "./pages";
+import { HomePage, LoginPage, ProfilePage, WelcomePage } from "./pages";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -17,6 +17,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/welcome" element={<WelcomePage />} />
             {/* <Route path="/post/:id" element={<PostItem />} /> */}
           </Routes>
         </div>
