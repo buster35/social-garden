@@ -4,3 +4,5 @@ export { default as Footer } from "./Footer";
 export { default as Login } from "./Login";
 export { default as PhotoUpload } from "./PhotoUpload";
 export { default as Chat } from "./Chat";
+export { default as Newsfeed } from './Newsfeed'
+
