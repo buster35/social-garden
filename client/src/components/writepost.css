@@ -1,0 +1,6 @@
+.writepost-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  border: 2px solid black;
+}
