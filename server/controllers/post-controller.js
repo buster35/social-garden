@@ -1,23 +1,25 @@
 // const { createReaction, removeReaction } = require('../../../../homework/Module 18 Homework/controllers/thought-controller');
-const { PostItem } = require("../models");
+const { Post } = require("../models");
 
 // FYI: The user's password is encrypted at the model level
 
 module.exports = {
   async createPost({ body, params }, res) {
+    console.log({ body });
+
     try {
-      const todo = await PostItem.create({
-        item: body.item,
-        userId: params.userid,
+      const post = await Post.create({
+        post: body.post,
+        userId: body.userid,
+        username: body.username,
+        currDate: Date.now(),
       });
-      return res.status(200).json({ status: "success", payload: todo });
+      return res.status(200).json({ status: "success", payload: post });
     } catch (err) {
-      return res
-        .status(400)
-        .json({
-          status: "error",
-          msg: `Error creating Post Item: ${err.message}`,
-        });
+      return res.status(400).json({
+        status: "error",
+        msg: `Error creating Post Item: ${err.message}`,
+      });
     }
   },
 
@@ -27,12 +29,10 @@ module.exports = {
       return res.status(200).json({ status: "success", payload: posts });
     } catch (err) {
       console.log(err.message);
-      return res
-        .status(400)
-        .json({
-          status: "error",
-          msg: `Error retrieving Post Items: ${err.message}`,
-        });
+      return res.status(400).json({
+        status: "error",
+        msg: `Error retrieving Post Items: ${err.message}`,
+      });
     }
   },
 
@@ -41,12 +41,10 @@ module.exports = {
       const post = await PostItem.findOne({ _id: params.id });
       return res.status(200).json({ status: "success", payload: post });
     } catch (err) {
-      return res
-        .status(400)
-        .json({
-          status: "error",
-          msg: `Error retrieving Post Item: ${err.message}`,
-        });
+      return res.status(400).json({
+        status: "error",
+        msg: `Error retrieving Post Item: ${err.message}`,
+      });
     }
   },
 
@@ -60,12 +58,10 @@ module.exports = {
       return res.status(200).json({ status: "success", payload: post });
     } catch (err) {
       console.log(err.message);
-      return res
-        .status(400)
-        .json({
-          status: "error",
-          msg: `Error updating Post Item: ${err.message}`,
-        });
+      return res.status(400).json({
+        status: "error",
+        msg: `Error updating Post Item: ${err.message}`,
+      });
     }
   },
 
@@ -74,12 +70,10 @@ module.exports = {
       const todo = await PostItem.findOneAndRemove({ _id: params.id });
       return res.status(200).json({ status: "success", payload: todo });
     } catch (err) {
-      return res
-        .status(400)
-        .json({
-          status: "error",
-          msg: `Error removing Post Item: ${err.message}`,
-        });
+      return res.status(400).json({
+        status: "error",
+        msg: `Error removing Post Item: ${err.message}`,
+      });
     }
   },
 
