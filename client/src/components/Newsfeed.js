@@ -33,7 +33,7 @@ function Newsfeed() {
       <h5>Newsfeed</h5>
       {allPosts.map((post, index) => (
         <Post key={index} index={index} post={post} />
-      ))};
+      ))}
       </div>
   );
 }
