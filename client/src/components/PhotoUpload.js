@@ -17,11 +17,9 @@ const PhotoUpload = () => {
           },
         });
 
-        console.log(query); //working
-
-        const result = await query.json();
-
-        console.log(result);
+        const result = await query
+          .json()
+          .then(alert("Your photo has been seeded to our database🌱"));
 
         if (result && result.payload) {
           window.location.href = "/";

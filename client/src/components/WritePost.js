@@ -4,10 +4,9 @@ import {useState} from "react";
 import { useUserContext } from "../ctx/UserContext"
 
 const WritePost = () => {
-  const currUser = useUserContext()
-  const [postText, setPostText] =useState("")
-  const [formData, setFormData] = useState({ })
-  
+  const currUser = useUserContext();
+  const [postText, setPostText] = useState("");
+  const [formData, setFormData] = useState({});
 
   const handleInputChange = (e) => {
     e.preventDefault()
@@ -40,16 +39,15 @@ const WritePost = () => {
 }
 
   return (
-     <div className="writePost">
+    <div className="writePost">
       <form>
       <label for="writePost">Write a Post</label>
         <input className= "postText" name= "postText" type="text" value= {formData.postText} onChange= {handleInputChange} rows={3}>
         </input>
         <button className="postButton btn btn-secondary" type="submit">Post</button>
       </form>
-     </div> 
-    
+    </div>
   );
-}
+};
 
-export default WritePost
+export default WritePost;
