@@ -20,7 +20,6 @@ const HomePage = () => {
       <div className="Home-newsfeed">
       <Newsfeed />
       </div>
-      </div>
     </div>
   );
 };
