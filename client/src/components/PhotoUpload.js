@@ -35,7 +35,7 @@ const PhotoUpload = () => {
   };
 
   return (
-    <div>
+    <div className="photoUpload">
       <h5>Photo Upload</h5>
 
       {selectedImage && (
