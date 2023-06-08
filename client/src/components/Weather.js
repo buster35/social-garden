@@ -44,7 +44,7 @@ function Weather() {
       return;
     }
 
-    const html = weatherData.list.slice(1, 1).map((day, index) => {
+    const html = weatherData.list.map((day, index) => {
       const date = day.dt_txt;
       const wind = day.wind.speed;
       const humidity = day.main.humidity;
