@@ -5,15 +5,23 @@
 // Or it could be a picture of the website proper on the left, instead of a big picture.
 // Should include the navbar the same as all the other pages, so no worries there.
 // Could add Amy's name logo in the front page as well!
+import React from 'react'
+import "./WelcomePage.css"
 
 const WelcomePage = () => {
-  function LoginPage() {
-    window.location.href = "/login"
-  }
+  function handleSignupLogin() {
+    window.location.href = "/login";
+  }  
   return (
     <div>
-      <h1>Welcome to The Social Garden!</h1>
-      <button onClick={LoginPage}>Sign Up or Log In!</button>
+      <div class="split-page">
+        <div class="left-side">
+          <img src="image.jpg" alt="Image" />
+        </div>
+        <div class="right-side">
+          <button class="signup-login" onclick={handleSignupLogin}>Signup/Login</button>
+        </div>
+      </div>
     </div>
   )
 }
