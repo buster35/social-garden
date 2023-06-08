@@ -56,7 +56,7 @@ server.on('connection', (ws) => {
           // Checking if the message is a valid one
 
           if (
-              typeof data.sender !== 'string' ||
+              // typeof data.sender !== 'string' ||
               typeof data.body !== 'string'
           ) {
               console.error('Invalid message');
