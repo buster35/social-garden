@@ -1,6 +1,9 @@
 import React from 'react';
 import './newsfeed.css';
 import Post from './Post';
+import "bootstrap/dist/css/bootstrap.min.css";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 
 function Newsfeed() {
@@ -30,7 +33,7 @@ function Newsfeed() {
       <h5>Newsfeed</h5>
       {allPosts.map((post, index) => (
         <Post key={index} index={index} post={post} />
-      ))};
+      ))}
       </div>
   );
 }

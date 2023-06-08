@@ -1,0 +1,9 @@
+.weather-search {
+  justify-content: center;
+  border: 2px solid black;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  justify-content: center;
+  width: 95%;
+}

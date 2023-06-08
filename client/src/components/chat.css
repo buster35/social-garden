@@ -1,9 +1,9 @@
 .chat-container {
+  justify-content: center;
   border: 2px solid black;
-  width: 30%;
-}
-
-.chat-messages {
-  border: 2px solid black;
-  min-height: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  justify-content: center;
+  width: 95%;
 }
