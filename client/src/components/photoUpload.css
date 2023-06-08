@@ -1,3 +1,11 @@
 .photo {
   border: 2px solid black;;
 }
+
+.photo-container {
+  background: white;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+}

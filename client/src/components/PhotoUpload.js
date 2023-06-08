@@ -33,7 +33,7 @@ const PhotoUpload = () => {
   };
 
   return (
-    <div>
+    <div className="photo-container">
       <h5>Photo Upload</h5>
 
       {selectedImage && (
