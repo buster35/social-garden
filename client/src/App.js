@@ -1,13 +1,16 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Header, Footer } from "./components";
-import { UserProvider } from "./ctx/UserContext";
+import { UserProvider, useUserContext } from "./ctx/UserContext";
 import { HomePage, LoginPage, ProfilePage, WelcomePage } from "./pages";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 function App() {
+  const { currUser } = useUserContext()
+  console.log(currUser)
+
   return (
     <BrowserRouter>
       <UserProvider>

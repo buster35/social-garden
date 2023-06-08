@@ -1,6 +1,6 @@
-// import { useState, useEffect } from "react"
+import { useEffect } from "react"
 // import { Link } from "react-router-dom";
-// import { useUserContext } from "../ctx/UserContext"
+import { useUserContext } from "../ctx/UserContext"
 import { Container } from "react-bootstrap";
 import { Weather, Chat, PhotoUpload, Newsfeed, WritePost, Login } from "./../components";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -8,6 +8,17 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 const HomePage = () => {
+
+  // const { currUser } = useUserContext()
+  // console.log(currUser)
+  // console.log(currUser.status)
+
+  // useEffect(() => {
+  //   if( currUser?.status !== "found" ){
+  //     window.location.href = "/login"
+  //   }
+  // }, [])
+
   return (
     <div className="App">
       <div className="App-home">
