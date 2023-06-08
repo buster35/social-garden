@@ -3,14 +3,14 @@ import React from "react";
 import { useState } from "react";
 
 const WritePost = () => {
-  // const currUser = useUserContext();
+  const currUser = useUserContext();
   const [postText, setPostText] = useState("");
   const [formData, setFormData] = useState({});
 
-  // const handleInputChange = (e) => {
-  //   setFormData({ ...formData, [e.target.name]: e.target.value });
-  // };
-  // console.log(formData)
+  const handleInputChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+  console.log(formData);
 
   return (
     <div className="writePost">
@@ -21,12 +21,12 @@ const WritePost = () => {
           name="postText"
           type="text"
           value={formData.postText}
-          // onChange={handleInputChange}
+          onChange={handleInputChange}
           rows={3}
         ></input>
         <button
           className="postButton btn btn-secondary"
-          // onClick={handleFormSubmit}
+          onClick={handleFormSubmit}
         >
           Post
         </button>
