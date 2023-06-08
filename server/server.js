@@ -3,13 +3,16 @@ const cookieParser = require("cookie-parser");
 const path = require("path");
 const db = require("./config/connection");
 const routes = require("./routes");
+const bodyParser = require("body-parser");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(cookieParser());
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+// app.use(express.urlencoded({ extended: true }));
+// app.use(express.json());
+app.use(bodyParser.json({ limit: "16mb", extended: true })); //
+app.use(bodyParser.urlencoded({ limit: "16mb", extended: true }));
 
 // if we're in production, serve client/build as static assets
 if (process.env.NODE_ENV === "production") {
