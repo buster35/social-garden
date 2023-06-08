@@ -30,7 +30,7 @@ function Weather() {
     const humidity = weatherData.list[0].main.humidity;
 
     return (
-      <div>
+      <div className="weather-container">
         <h1>Weather for {cityName}</h1>
         <p>Temperature: {temperature} degrees</p>
         <p>Wind: {wind} mph</p>
@@ -70,7 +70,7 @@ function Weather() {
   };
 
   return (
-    <div>
+    <div className="weather-search">
       <input
         type="text"
         placeholder="City"
