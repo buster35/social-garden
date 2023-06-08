@@ -1,5 +1,5 @@
 
-import { useParams } from "react-router-dom";
+
 import "./chat.css"
 import React, { useState, useEffect, useRef} from "react";
 import { useUserContext } from "../ctx/UserContext"
@@ -8,11 +8,11 @@ import { useUserContext } from "../ctx/UserContext"
 function ChatPage() {
   const [messages, setMessages] = useState([]);
   const [connection, setConnection] = useState(false);
-  const [messageBody, setMessageBody] = useState("");
+  const [messageBody, setMessageBody] = useState();
 
-  const currUser = useUserContext()
+  const {currUser} = useUserContext()
 
-  const { username } = useParams();
+  console.log({currUser})
 
   const ws = useRef();
 
@@ -21,7 +21,7 @@ function ChatPage() {
     if (messageBody) {
       ws.current.send(
         JSON.stringify({
-          // sender: currUser,
+          sender: currUser.data.username,
           body: messageBody,
         })
       );
@@ -43,7 +43,7 @@ function ChatPage() {
     ws.current.onmessage = (e) => {
       const data = JSON.parse(e.data);
       setMessages((_messages) => [..._messages, data]);
-      console.log(messages);
+     
     };
 
     return () => {
@@ -66,10 +66,10 @@ function ChatPage() {
       <div className="chat-messages">
         {messages.map((message, index) => (
           <div key={index} >
-                    {/* {message.sender} at
+                    {message.sender} at 
                       {new Date(message.sentAt).toLocaleTimeString(undefined, {
                         timeStyle: "short",
-                      })}{" "} */}
+                      })}{" "}
                   {message.body}
           </div>
         ))}
