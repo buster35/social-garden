@@ -13,17 +13,13 @@ const HomePage = () => {
       <div className="App-home">
       <h3>Home Page</h3>
         <Container>
-        <Row>
-          <Col>
+        <Row style={{ borderColor:'2px solid green', padding: '20px' }}>
+          <Col className="col-1" xs={8}>
             <div className="write-post"><WritePost /></div>
             <div className="Home-upload"><PhotoUpload /></div>
             <div className="Home-newsfeed"><Newsfeed /></div>
           </Col>
-        </Row>
-        </Container>
-        <Container>
-        <Row>
-          <Col>
+          <Col className="col-2">
             <div className="Home-weather container"><Weather /></div>
             <div className="Home-chat"><Chat /></div>
           </Col>
