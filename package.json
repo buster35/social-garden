@@ -1,5 +1,5 @@
 {
-  "name": "mern-auth-starter",
+  "name": "social-garden",
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
@@ -17,6 +17,9 @@
   },
   "dependencies": {
     "axios": "^1.4.0",
+    "body-parser": "^1.20.2",
+    "file-system": "^2.2.2",
+    "mongo-image-converter": "^1.0.2",
     "jsonwebtoken": "^9.0.0",
     "ws": "^8.13.0"
   }

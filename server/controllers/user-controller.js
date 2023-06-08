@@ -6,11 +6,9 @@ require("dotenv").config();
 
 module.exports = {
   async createUser({ body }, res) {
-    console.log(body);
     try {
       const user = await User.create(body);
       const { password, ...modifiedUser } = user;
-      console.log(user);
 
       const token = jwt.sign(
         {
@@ -19,7 +17,6 @@ module.exports = {
         },
         process.env.JWT_SECRET
       );
-      console.log(token);
 
       res
         .cookie("auth-cookie", token)
