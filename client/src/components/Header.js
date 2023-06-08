@@ -27,6 +27,7 @@ const Header = () => {
                 <>
 
                   <li><Nav.Link href="/login">Login Page</Nav.Link></li>
+                  <li><Nav.Link href="/profile">Profile</Nav.Link></li>
                 </>
               )}
             </Nav>
