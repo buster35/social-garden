@@ -14,16 +14,16 @@ const HomePage = () => {
       <h3>Home Page</h3>
         <Container>
         <Row>
-          <div style={{ borderColor:'2px solid green', padding: '20px' }}>
-          <Col className="col-1" xs={8}>
-            <div className="write-post"><WritePost /></div>
-            <div className="Home-upload"><PhotoUpload /></div>
-            <div className="Home-newsfeed"><Newsfeed /></div>
+          
+          <Col xs={8} style={{ backgroundColor:'#DAD7CD', padding: '20px', margin: '20px' }}>
+              <div className="write-post"><WritePost /></div>
+              <div className="Home-upload"><PhotoUpload /></div>
+              <div className="Home-newsfeed"><Newsfeed /></div>
           </Col>
-          </div>
-          <Col className="col-2">
-            <div className="Home-weather container"><Weather /></div>
-            <div className="Home-chat"><Chat /></div>
+        
+          <Col style={{ backgroundColor:'#A3B18A', padding: '20px', margin: '20px' }}>
+              <div className="Home-weather container"><Weather /></div>
+              <div className="Home-chat"><Chat /></div>
           </Col>
         </Row>
         </Container>
