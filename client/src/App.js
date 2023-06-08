@@ -4,8 +4,6 @@ import { Header, Footer } from "./components";
 import { UserProvider } from "./ctx/UserContext";
 import { HomePage, LoginPage, ProfilePage, WelcomePage } from "./pages";
 
-
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
