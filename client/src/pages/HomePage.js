@@ -1,6 +1,4 @@
-// import { useState, useEffect } from "react"
 // import { Link } from "react-router-dom";
-// import { useUserContext } from "../ctx/UserContext"
 import { Container } from "react-bootstrap";
 import {
   Weather,
