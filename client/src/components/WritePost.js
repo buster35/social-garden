@@ -3,7 +3,7 @@ import React from "react";
 import { useState } from "react";
 import { useUserContext } from "../ctx/UserContext";
 
-const WritePost = () => {
+const WritePost = ({ reloadPosts }) => {
   const { currUser } = useUserContext();
   const [postText, setPostText] = useState("");
   const [formData, setFormData] = useState({});
@@ -34,6 +34,7 @@ const WritePost = () => {
 
       const result = await resp.json();
       console.log(result);
+      reloadPosts();
     } catch (error) {
       console.log(error.message);
     }
