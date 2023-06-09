@@ -30,16 +30,22 @@ const Header = () => {
             {/* Add the activeKey code below and the rest should work  */}
             <Nav className="me-auto" activeKey={window.location.pathname}>
               <li>
+                <Nav.Link href="/login">Login Page</Nav.Link>
+              </li>
+              <li>
                 <Nav.Link href="/">Home</Nav.Link>
               </li>
-              {currUser.status === "notfound" && (
+              <li>
+                <Nav.Link href="/profile">Profile</Nav.Link>
+              </li>
+              {currUser.status === "found" && (
                 <>
-                  <li>
-                    <Nav.Link href="/login">Login Page</Nav.Link>
+                  {/* <li>
+                    <Nav.Link href="/">Home</Nav.Link>
                   </li>
                   <li>
                     <Nav.Link href="/profile">Profile</Nav.Link>
-                  </li>
+                  </li> */}
                 </>
               )}
             </Nav>

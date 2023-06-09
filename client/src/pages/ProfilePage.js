@@ -1,7 +1,20 @@
 import React from 'react'
+import { useUserContext } from "../ctx/UserContext"
+import { useEffect } from "react"
 import { Weather, Chat, PhotoUpload } from "../components";
 
 export default function ProfilePage() {
+
+  // const { currUser } = useUserContext()
+  // console.log(currUser)
+  // console.log(currUser.status)
+
+  // useEffect(() => {
+  //   if( currUser?.status !== "found" ){
+  //     window.location.href = "/login"
+  //   }
+  // }, [])
+
   return (
     <div className='App'>
       <div className="App.profile">
