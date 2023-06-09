@@ -15,7 +15,7 @@ const HomePage = () => {
         <Container>
         <Row>
           
-          <Col xs={8} style={{ backgroundColor:'#DAD7CD', padding: '20px', margin: '20px' }}>
+          <Col xs={8} style={{ backgroundColor:'#31572c',margin: '20px' }}>
               <div className="write-post"><WritePost /></div>
               <div className="Home-upload"><PhotoUpload /></div>
               <div className="Home-newsfeed"><Newsfeed /></div>

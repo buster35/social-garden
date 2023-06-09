@@ -1,13 +1,16 @@
-.gardenlogo {
+.gardenlogo2  {
   max-height: 200px;
   max-width: 15%;
 }
 
-.socialgarden {
+.socialgarden2 {
   justify-content: center;
   max-width: 50%;
 }
 
 header {
-  background-color: #588157;
+  background-color: #132a13;
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
