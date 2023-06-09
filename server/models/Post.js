@@ -19,6 +19,7 @@ const postSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: "User",
     },
+
     // Thinking of adding on a way to differentiate different kinds of posts. We may or may not want this.
     flair: {
       type: String,
