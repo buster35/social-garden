@@ -5,15 +5,15 @@ const { Post } = require("../models");
 
 module.exports = {
   async createPost({ body, params }, res) {
-    console.log({ body });
-
+    // console.log({ body })
     try {
       const post = await Post.create({
         post: body.post,
-        userId: body.userid,
+        userId: body.userId,
         username: body.username,
         currDate: Date.now(),
       });
+      // console.log(post);
       return res.status(200).json({ status: "success", payload: post });
     } catch (err) {
       return res.status(400).json({
@@ -23,10 +23,12 @@ module.exports = {
     }
   },
 
-  async getAllPost({ body, params }, res) {
+  async getAllPosts({ body, params }, res) {
     try {
-      const posts = await PostItem.find({ userId: params.userid });
-      return res.status(200).json({ status: "success", payload: posts });
+      const posts = await Post.find({ userId: params.userId });
+      return res
+        .status(200)
+        .json({ status: "success", payload: posts.reverse() });
     } catch (err) {
       console.log(err.message);
       return res.status(400).json({
