@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0912d619.css",
+    "main.js": "/static/js/main.d21f5b5a.js",
+    "static/media/gardenlogo.png": "/static/media/gardenlogo.b62acdd21e0b059e6262.png",
+    "static/media/socialgarden.png": "/static/media/socialgarden.0a349dedf2d8e0626512.png",
+    "index.html": "/index.html",
+    "main.0912d619.css.map": "/static/css/main.0912d619.css.map",
+    "main.d21f5b5a.js.map": "/static/js/main.d21f5b5a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0912d619.css",
+    "static/js/main.d21f5b5a.js"
+  ]
+}
