@@ -1,6 +1,4 @@
-import { useEffect } from "react"
 // import { Link } from "react-router-dom";
-import { useUserContext } from "../ctx/UserContext"
 import { Container } from "react-bootstrap";
 import {
   Weather,
@@ -17,18 +15,6 @@ import { useEffect, useState } from "react";
 import { useUserContext } from "../ctx/UserContext";
 
 const HomePage = () => {
-<<<<<<< HEAD
-
-  // const { currUser } = useUserContext()
-  // console.log(currUser)
-  // console.log(currUser.status)
-
-  // useEffect(() => {
-  //   if( currUser?.status !== "found" ){
-  //     window.location.href = "/login"
-  //   }
-  // }, [])
-=======
   const { currUser } = useUserContext();
   const [newsFeed, setNewsFeed] = useState([]);
 
@@ -51,7 +37,6 @@ const HomePage = () => {
     console.log(currUser);
     checkForPosts();
   }, []);
->>>>>>> 3193c0f3778a6742eba27bb418b69afa54009612
 
   return (
     <div className="App">
