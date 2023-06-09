@@ -2,8 +2,9 @@ import "./header.css";
 import { useState } from "react";
 import { useUserContext } from "../ctx/UserContext";
 import { Navbar, Nav } from "react-bootstrap";
-import gardenlogo from "./gardenlogo.png";
-import socialgarden from "./socialgarden.png";
+import gardenlogo2 from "./gardenlogo2.png";
+import socialgarden2 from "./socialgarden2.png";
+import gardenimage from './gardenimage.jpg'
 
 const Header = () => {
   const { currUser, logout } = useUserContext();
@@ -12,18 +13,23 @@ const Header = () => {
     <header className="pb-0 mb-0" style={{ borderBottom: "1px solid #333" }}>
       {/* <section> */}
       <img
-        className="gardenlogo"
-        src={gardenlogo}
+        className="gardenlogo2"
+        src={gardenlogo2}
         alt="Logo of a growing plant"
       />
       <img
-        className="socialgarden"
-        src={socialgarden}
+        className="socialgarden2"
+        src={socialgarden2}
         alt="name of the application in cursive writing"
+      />
+      <img
+        className="gardenimage"
+        src={gardenimage}
+        alt="Garden trowel with potted plants"
       />
       {/* </section> */}
 
-      <Navbar expand="md" style={{ justifyContent: "space-between" }}>
+      <Navbar bg="light" expand="md" style={{ justifyContent: "space-between" }}>
         <div className="container-fluid" style={{ width: "65%" }}>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

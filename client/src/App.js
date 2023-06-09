@@ -10,6 +10,7 @@ import "./App.css";
 
 function App() {
   return (
+    <div className="background">
     <BrowserRouter>
       <UserProvider>
         <Header />
@@ -24,6 +25,7 @@ function App() {
         <Footer />
       </UserProvider>
     </BrowserRouter>
+    </div>
   );
 }
 
