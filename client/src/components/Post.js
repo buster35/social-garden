@@ -2,12 +2,13 @@ import './post.css';
 import React from 'react';
 
 
-const Post = ({ post: { userName, userId, body }, index }) => {
+const Post = ({ post: { userName, userId, currDate, post }, index }) => {
   return (
     <div className='post-container'>
       <h6>{ userName }</h6>
       <h6>{ userId }</h6>
-      <p>{ body }</p>
+      <p>{ currDate }</p>
+      <p>{ post }</p>
     </div>
   )
 }
