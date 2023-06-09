@@ -4,6 +4,7 @@ import { useUserContext } from "../ctx/UserContext";
 import { Navbar, Nav } from "react-bootstrap";
 import gardenlogo2 from "./gardenlogo2.png";
 import socialgarden2 from "./socialgarden2.png";
+import gardenimage from './gardenimage.jpg'
 
 const Header = () => {
   const { currUser, logout } = useUserContext();
@@ -20,6 +21,11 @@ const Header = () => {
         className="socialgarden2"
         src={socialgarden2}
         alt="name of the application in cursive writing"
+      />
+        <img
+        className="gardenimage"
+        src={gardenimage}
+        alt="Garden trowel with potted plants"
       />
       {/* </section> */}
 

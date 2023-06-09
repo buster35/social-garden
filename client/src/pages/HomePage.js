@@ -42,16 +42,15 @@ const HomePage = () => {
 
   return (
     <div className="App">
-      <div className="App-home">
+      <div className="App-home" style={{ backgroundColor:'#132a13' }}>
         <h3>Home Page</h3>
         <Container>
           <Row>
             <Col
               xs={8}
               style={{
-                backgroundColor: "#DAD7CD",
+                backgroundColor: "##183618",
                 padding: "20px",
-                margin: "20px",
               }}
             >
               <div className="write-post">
@@ -67,9 +66,9 @@ const HomePage = () => {
 
             <Col
               style={{
-                backgroundColor: "#A3B18A",
+                backgroundColor: "##183618",
                 padding: "20px",
-                margin: "20px",
+
               }}
             >
               <div className="Home-weather container">
