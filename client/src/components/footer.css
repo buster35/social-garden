@@ -1,11 +1,12 @@
 .footer {
   background-color: #132a13;
   position: fixed;
-  left: 0;
   bottom: 0;
   width: 100%;
   text-align: center;
   padding: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 a {

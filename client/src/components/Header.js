@@ -22,14 +22,14 @@ const Header = () => {
         src={socialgarden2}
         alt="name of the application in cursive writing"
       />
-        <img
+      <img
         className="gardenimage"
         src={gardenimage}
         alt="Garden trowel with potted plants"
       />
       {/* </section> */}
 
-      <Navbar expand="md" style={{ justifyContent: "space-between" }}>
+      <Navbar bg="light" expand="md" style={{ justifyContent: "space-between" }}>
         <div className="container-fluid" style={{ width: "65%" }}>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
