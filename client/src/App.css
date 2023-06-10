@@ -3,23 +3,23 @@
   margin-bottom: 100px;
 }
 .App-profile {
-  border: 1 px, solid #344E41;
+  border: 1 px, solid #344e41;
 }
 
 .App-home {
-  border: 2 px, solid #344E41;
+  border: 2 px, solid #344e41;
 }
 .Home-weather {
-  border: 2 px, solid #344E41;
+  border: 2 px, solid #344e41;
 }
 .Home-chat {
-  border: 2 px, solid #344E41;
+  border: 2 px, solid #344e41;
 }
 .Home-upload {
-  border: 2 px, solid #344E41;
+  border: 2 px, solid #344e41;
 }
 .container {
-  border: 2px, solid #344E41 ;
+  border: 2px, solid #344e41;
 }
 .welcome {
   /* text-align: center; */
@@ -32,6 +32,6 @@
 
 .background {
   background-color: #6c7d5c;
-  position: fixed;
+  /* position: fixed; */
   top: 0;
 }

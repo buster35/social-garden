@@ -6,12 +6,46 @@ const { Post } = require("../models");
 module.exports = {
   async createPost({ body, params }, res) {
     // console.log({ body })
+    const months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+
+    const days = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
+
+    const dateFormat = () => {
+      const d = new Date();
+      let hours = d.getHours();
+      let ampm = hours >= 12 ? "pm" : "am";
+      return `Posted on ${days[d.getDay()]}, ${
+        months[d.getMonth()]
+      } ${d.getDate()} at ${d.getHours()}:${d.getMinutes()}${ampm}`;
+    };
+
     try {
       const post = await Post.create({
         post: body.post,
         userId: body.userId,
         username: body.username,
-        currDate: Date.now(),
+        currDate: dateFormat(),
       });
       // console.log(post);
       return res.status(200).json({ status: "success", payload: post });
