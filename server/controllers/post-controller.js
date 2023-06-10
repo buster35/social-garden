@@ -25,6 +25,20 @@ module.exports = {
 
   async getAllPosts({ body, params }, res) {
     try {
+      const posts = await Post.find();
+      return res
+        .status(200)
+        .json({ status: "success", payload: posts.reverse() });
+    } catch (err) {
+      console.log(err.message);
+      return res.status(400).json({
+        status: "error",
+        msg: `Error retrieving Post Items: ${err.message}`,
+      });
+    }
+  },
+  async getUserPosts({ body, params }, res) {
+    try {
       const posts = await Post.find({ userId: params.userId });
       return res
         .status(200)
@@ -37,7 +51,6 @@ module.exports = {
       });
     }
   },
-
   async getOnePost({ params }, res) {
     try {
       const post = await PostItem.findOne({ _id: params.id });
