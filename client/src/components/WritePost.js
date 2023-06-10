@@ -43,7 +43,7 @@ const WritePost = ({ reloadPosts }) => {
   return (
     <div className="writePost">
       <form>
-        <label for="writePost">Write a Post</label>
+        <label htmlFor="writePost">Write a Post</label>
         <input
           className="postText"
           name="postText"

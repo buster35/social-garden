@@ -7,6 +7,7 @@ import {
   Newsfeed,
   WritePost,
   Login,
+  PhotoGallery,
 } from "./../components";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Row from "react-bootstrap/Row";
@@ -74,6 +75,9 @@ const HomePage = () => {
               </div>
               <div className="Home-chat">
                 <Chat />
+              </div>
+              <div>
+                <PhotoGallery />
               </div>
             </Col>
           </Row>
