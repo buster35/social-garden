@@ -1,7 +1,7 @@
 import React from 'react'
 import { useUserContext } from "../ctx/UserContext"
-import { useEffect } from "react"
-import { Weather, Chat, PhotoUpload } from "../components";
+import { useState, useEffect } from "react"
+import { Weather, Chat, PhotoUpload, UserPosts } from "../components";
 
 export default function ProfilePage() {
 
@@ -14,6 +14,28 @@ export default function ProfilePage() {
   //     window.location.href = "/login"
   //   }
   // }, [])
+  const { currUser } = useUserContext();
+  const [userPosts, setUserPosts] = useState([]);
+
+  const checkForPosts = async () => {
+    console.log("reloading the posts");
+    try {
+      const resp = await fetch(`/api/post/all/${currUser.data._id}`);
+      const result = await resp.json();
+      console.log(result);
+      if (result.status === "success") {
+        console.log(result.payload);
+        setUserPosts(result.payload);
+      }
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
+
+  useEffect(() => {
+    console.log(currUser);
+    checkForPosts();
+  }, []);
 
   return (
     <div className='App'>
@@ -26,10 +48,12 @@ export default function ProfilePage() {
         <div className='Profile.chat.container'>
         <Chat />
         </div>
-        <div className='Profile.upload.container'>
+        {/* <div className='Profile.upload.container'>
         <PhotoUpload />
+        </div> */}
+        <div className='Profile-posts'>
+        <UserPosts feed={userPosts} />
         </div>
-
       </div>
     </div >
   )
