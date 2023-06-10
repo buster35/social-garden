@@ -12,7 +12,7 @@ const postSchema = new Schema(
       required: true,
     },
     currDate: {
-      type: Date,
+      type: String,
       default: Date.now(),
     },
     userId: {
@@ -34,6 +34,8 @@ const postSchema = new Schema(
     id: false,
   }
 );
+
+postSchema.virtual("dateFormat").get(function () {});
 
 const Post = model("Post", postSchema);
 module.exports = Post;
