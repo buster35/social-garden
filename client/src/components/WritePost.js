@@ -2,7 +2,6 @@ import "./writepost.css";
 import React from "react";
 import { useState } from "react";
 import { useUserContext } from "../ctx/UserContext";
-import Button from 'react-bootstrap/Button';
 
 const WritePost = ({ reloadPosts }) => {
   const { currUser } = useUserContext();
@@ -52,14 +51,14 @@ const WritePost = ({ reloadPosts }) => {
           value={formData.postText}
           onChange={handleInputChange}
           rows={3}
-        ></input><br></br><br></br>
-        <Button
+        ></input>
+        <button
           onClick={handleFormSubmit}
-          variant="light"
+          className="postButton btn btn-light"
           type="submit"
         >
           Post
-        </Button>
+        </button>
       </form>
     </div>
   );
