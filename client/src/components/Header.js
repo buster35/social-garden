@@ -25,7 +25,7 @@ const Header = () => {
       <img
         className="hostas"
         src={hostas}
-        alt="Garden trowel with potted plants"
+        alt="Hosta leaves covered in raindrops. Photo by Marlena Keller."
       />
       {/* </section> */}
 

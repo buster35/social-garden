@@ -2,6 +2,9 @@ import React from 'react'
 import { useUserContext } from "../ctx/UserContext"
 import { useState, useEffect } from "react"
 import { Weather, Chat, PhotoUpload, UserPosts } from "../components";
+import { Container } from "react-bootstrap";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 export default function ProfilePage() {
 
@@ -39,21 +42,38 @@ export default function ProfilePage() {
 
   return (
     <div className='App'>
-      <div className="App.profile">
-        <h1>Profile</h1>
+      <div className="App-home" style={{ backgroundColor: "#132a13" }}>
+        <h3 className="Home-header">My Profile</h3>
+        <Container>
+          <Row>
+            <Col 
+              xs={8}
+              style={{
+                backgroundColor: "##183618",
+                padding: "20px",
+              }}
+            >
+              <div className='Profile-posts'>
+                <UserPosts feed={userPosts} />
+              </div>
+            </Col>
 
-        <div className='Profile.weather.container'>
-        <Weather />
-        </div>
-        <div className='Profile.chat.container'>
-        <Chat />
-        </div>
-        {/* <div className='Profile.upload.container'>
-        <PhotoUpload />
-        </div> */}
-        <div className='Profile-posts'>
-        <UserPosts feed={userPosts} />
-        </div>
+            <Col
+              style={{
+                backgroundColor: "#132a13",
+                padding: "20px",
+              }}
+            >
+              <div>
+                <Weather />
+              </div>
+              <div className="Home-chat">
+                <Chat />
+              </div>
+
+            </Col>
+          </Row>
+        </Container>
       </div>
     </div >
   )
