@@ -41,7 +41,7 @@ const HomePage = () => {
 
   return (
     <div className="App">
-      <div className="App-home" style={{ backgroundColor:'#132a13' }}>
+      <div className="App-home" style={{ backgroundColor: "#132a13" }}>
         <h3>Home Page</h3>
         <Container>
           <Row>
@@ -67,7 +67,6 @@ const HomePage = () => {
               style={{
                 backgroundColor: "##183618",
                 padding: "20px",
-
               }}
             >
               <div className="Home-weather container">
