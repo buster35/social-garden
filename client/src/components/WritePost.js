@@ -42,8 +42,9 @@ const WritePost = ({ reloadPosts }) => {
 
   return (
     <div className="writePost">
+      <h5>Write a Post</h5>
       <form>
-        <label htmlFor="writePost">Write a Post</label>
+        {/* <label htmlFor="writePost">Write a Post</label> */}
         <input
           className="postText"
           name="postText"
@@ -52,6 +53,7 @@ const WritePost = ({ reloadPosts }) => {
           onChange={handleInputChange}
           rows={3}
         ></input>
+        <br></br> <br></br>
         <button
           onClick={handleFormSubmit}
           className="postButton btn btn-light"

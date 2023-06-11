@@ -55,8 +55,10 @@ function ChatPage() {
   }, [messages.length]);
 
   return (
-    <div className="chat-container">
+    <div>
       <h5>Live Chat</h5>
+    <div className="chat-container">
+      
       <br></br>
       <div className="chat-messages">
         {messages.map((message, index) => (
@@ -89,6 +91,7 @@ function ChatPage() {
           Send
         </Button>
       </div>
+    </div>
     </div>
   );
 }

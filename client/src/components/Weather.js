@@ -35,8 +35,10 @@ function Weather() {
 
 
   return (
-    <div className="weather-search">
+    <div>
       <h5>Three Day Forecast</h5>
+    <div className="weather-search">
+      
       <br></br>
       <form onSubmit={handleSubmit} onKeyUp={handleKeyUp} >
         <input
@@ -77,6 +79,7 @@ function Weather() {
         
       ))}
 
+    </div>
     </div>
   );
 }

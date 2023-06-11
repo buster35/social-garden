@@ -69,7 +69,7 @@ const HomePage = () => {
                 padding: "20px",
               }}
             >
-              <div  className="Home-weather container">
+              <div>
                 <Weather />
               </div>
               <div className="Home-chat">
