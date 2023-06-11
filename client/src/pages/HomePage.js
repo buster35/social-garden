@@ -42,7 +42,7 @@ const HomePage = () => {
   return (
     <div className="App">
       <div className="App-home" style={{ backgroundColor: "#132a13" }}>
-        <h3>Home Page</h3>
+        <br></br><h3>Home Page</h3>
         <Container>
           <Row>
             <Col

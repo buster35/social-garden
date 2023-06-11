@@ -1,0 +1,9 @@
+.gallery-container {
+  background-color: #6c7d5c;
+}
+
+.gallery-styling {
+  margin-bottom: 10px;
+  border: 2px solid black;
+  width: 95%;
+}
