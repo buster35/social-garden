@@ -21,7 +21,7 @@ module.exports = {
   async showPhotos(req, res) {
     try {
       const photos = await Photo.find();
-      console.log(photos); //working
+
       return res.status(200).json({ status: "success", photos });
     } catch (err) {
       return res.status(400).json({
