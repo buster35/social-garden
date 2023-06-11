@@ -18,9 +18,6 @@ const server = new WebSocket.Server(
   }
 );
 
-// var host = location.origin.replace(/^http/, "ws");
-// this.connection = new WebSocket(host);
-
 app.use(cookieParser());
 // app.use(express.urlencoded({ extended: true }));
 // app.use(express.json());
@@ -30,13 +27,14 @@ app.use(bodyParser.urlencoded({ limit: "16mb", extended: true }));
 app.use(routes);
 
 // if we're in production, serve client/build as static assets
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "..", "client/build")));
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, "..", 'client/build')));
 
-  app.get("/*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "..", "client/build/index.html"));
-  });
+  app.get('/*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, "..", 'client/build/index.html'))
+  })
 }
+
 
 db.once("open", () => {
   app.listen(PORT, () => console.log(`Now listening on localhost: ${PORT}`));

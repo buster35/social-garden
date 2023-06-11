@@ -1,18 +1,19 @@
-import "./chat.css";
-import React, { useState, useEffect, useRef } from "react";
-import { useUserContext } from "../ctx/UserContext";
-import Button from "react-bootstrap/Button";
+import "./chat.css"
+import React, { useState, useEffect, useRef} from "react";
+import { useUserContext } from "../ctx/UserContext"
+
 
 function ChatPage() {
   const [messages, setMessages] = useState([]);
   const [connection, setConnection] = useState(false);
   const [messageBody, setMessageBody] = useState();
 
-  const { currUser } = useUserContext();
+  const {currUser} = useUserContext()
 
-  console.log({ currUser });
+  console.log({currUser})
 
   const ws = useRef();
+
 
   const sendMessage = () => {
     if (messageBody) {
@@ -23,24 +24,31 @@ function ChatPage() {
         })
       );
       setMessageBody("");
-      console.log(messageBody);
+      console.log(messageBody)
     }
   };
 
   useEffect(() => {
+
+    ws.current = new WebSocket("ws://localhost:8080");
+
     // var host = location.origin.replace(/^http/, "ws");
     // this.connection = new WebSocket(host);
     // ws.current = new WebSocket(host);
-    ws.current = new WebSocket("wss://social-garden.herokuapp.com/");
+   // ws.current = new WebSocket("wss://social-garden.herokuapp.com/");
+
+
 
     ws.current.onopen = () => {
       console.log("Chat connection opened");
       setConnection(true);
     };
 
+
     ws.current.onmessage = (e) => {
       const data = JSON.parse(e.data);
       setMessages((_messages) => [..._messages, data]);
+     
     };
 
     return () => {
@@ -58,6 +66,7 @@ function ChatPage() {
   }, [messages.length]);
 
   return (
+
     <div>
       <h5>Live Chat</h5>
       <div className="chat-container">
@@ -75,6 +84,7 @@ function ChatPage() {
           <div ref={scrollTarget} />
         </div>
 
+
         {/* <p>
           You are chatting as {currUser.data.username}
         </p> */}
@@ -83,12 +93,14 @@ function ChatPage() {
           <input
             id="message"
             type="text"
+
             name="message"
             placeholder="Type your message here..."
             value={messageBody}
             onChange={(e) => setMessageBody(e.target.value)}
             required
           />
+
           <br></br>
           <br></br>
           <Button
@@ -101,6 +113,7 @@ function ChatPage() {
           </Button>
         </div>
       </div>
+
     </div>
   );
 }
