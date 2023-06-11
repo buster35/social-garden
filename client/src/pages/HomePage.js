@@ -45,7 +45,7 @@ const HomePage = () => {
         <h3 className="Home-header">Home Page</h3>
         <Container>
           <Row>
-            <Col
+            <Col 
               xs={8}
               style={{
                 backgroundColor: "##183618",
