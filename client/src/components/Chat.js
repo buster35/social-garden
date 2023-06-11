@@ -67,6 +67,7 @@ function ChatPage() {
 
   return (
 
+
     <div>
       <h5>Live Chat</h5>
       <div className="chat-container">
@@ -83,6 +84,7 @@ function ChatPage() {
           ))}
           <div ref={scrollTarget} />
         </div>
+
 
 
         {/* <p>
