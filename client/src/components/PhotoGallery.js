@@ -25,7 +25,7 @@ export default function PhotoGallery() {
       <h3>PhotoGallery</h3>
       {photos && photos.length > 0 ? (
         photos.map((photo) => (
-          <img key={photo._id} src={photo.photo} alt="Photo" />
+          <img key={photo._id} src={photo.photo} alt="Photo"  width={"80%"} />
         ))
       ) : (
         <p>No Photos To Display</p>
