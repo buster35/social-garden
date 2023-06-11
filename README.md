@@ -12,25 +12,21 @@ This project provided a great deal of insight into full-stack development and de
 
 ## Table of Contents
 
-### [Installation](#installation)
-
-### [Usage](#usage)
+### [Installation/Usage](#installation/usage)
 
 ### [Screenshots](#screenshots)
 
 ### [Contributions](#contributions)
 
-### [Tests](#tests)
-
 ### [Questions](#questions)
 
 ### [License](#license)
 
-## Installation
+## Installation/Usage
+
+Our site is deployed via Heroku, you can visit it here: https://social-garden.herokuapp.com/
 
 If you find yourself at our site, please feel free to sign up, which will allow you to upload photos, post to the news feed and use the live chat feature.
-
-## Usage
 
 ## Screenshots
 
@@ -38,17 +34,27 @@ If you find yourself at our site, please feel free to sign up, which will allow 
 
 ![HomePage](/client/src/assets/homepage-screenshot-2.png)
 
+![ProfilePage](/client/src/assets/profile-screenshot.png)
+
 ## Contributions
 
 The team that brought you Social Garden include the following people, and be sure to check out our respective repositories below: Marlena Keller, Amy Potter, Patrick Morris, Jon Helton and Zach Gilbert.
 
-The third party assets that were used for this project include: https://github.com/saran-surya/Mongo-Image-Converter - converts .png and .jpeg images into base64 string notation for efficient storage in MongoDB. https://github.com/websockets/ws - allows two-way communication between two computers without having to poll each user. https://openweathermap.org/api - an api that uses geographical coordinates to upload current and forecast weather data for a particular city.
+Marlena Keller - https://github.com/annamarlena
 
-## Tests
+Amy Potter - https://github.com/potteramy
+
+Patrick Morris - https://github.com/morrispg
+
+Jon Helton - https://github.com/JHelton404
+
+Zach Gilbert - https://github.com/buster35
+
+The third party assets that were used for this project include: https://github.com/saran-surya/Mongo-Image-Converter - converts .png and .jpeg images into base64 string notation for efficient storage in MongoDB. https://github.com/websockets/ws - allows two-way communication between two computers without having to poll each user. https://openweathermap.org/api - an api that uses geographical coordinates to upload current and forecast weather data for a particular city.
 
 ## Questions
 
-Please direct any further questions/inquiries to:
+Please direct any further questions/inquiries to: gilb9711@gmail.com.
 
 ## License
 
