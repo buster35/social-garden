@@ -5,6 +5,7 @@ import { Navbar, Nav } from "react-bootstrap";
 import gardenlogo2 from "./gardenlogo2.png";
 import socialgarden2 from "./socialgarden2.png";
 import hostas from './hostas.png'
+import bgimage from './bgimage.png'
 
 const Header = () => {
   const { currUser, logout } = useUserContext();
@@ -12,11 +13,11 @@ const Header = () => {
   return (
     <header className="pb-0 mb-0" style={{ borderBottom: "1px solid #333" }}>
       <img
-        className="gardenlogo2"
-        src={gardenlogo2}
+        className="bgimage"
+        src={bgimage}
         alt="Logo of a growing plant"
       />
-      <img
+      {/* <img
         className="socialgarden2"
         src={socialgarden2}
         alt="name of the application in cursive writing"
@@ -25,7 +26,7 @@ const Header = () => {
         className="hostas"
         src={hostas}
         alt="Hosta leaves covered in raindrops. Photo by Marlena Keller."
-      />
+      /> */}
 
       <Navbar bg="light" expand="md" style={{ justifyContent: "space-between" }}>
         <div className="container-fluid" style={{ width: "65%" }}>
