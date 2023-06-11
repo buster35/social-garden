@@ -70,6 +70,7 @@ function Weather() {
             <p>Humidity: {day.main.humidity}%</p>
             <p>Temperature: {day.main.temp} &deg;F</p>
             
+            
           </div>
           <br></br> <br></br>
         </div>
