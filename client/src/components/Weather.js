@@ -21,7 +21,6 @@ function Weather() {
 
         setForecastData(finalData)
         // setWeatherData(response.data);
-        
       })
       .catch((error) => {
         console.log(error);
