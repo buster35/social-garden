@@ -19,7 +19,9 @@ const LoginPage = () => {
         "Content-Type": "application/json",
       },
     });
+    console.log(query);
     const result = await query.json();
+    console.log(result);
 
     if (result && result.payload) {
       window.location.href = "/";
@@ -77,6 +79,5 @@ const LoginPage = () => {
     </div>
   );
 };
-
 
 export default LoginPage;
