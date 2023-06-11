@@ -22,7 +22,7 @@ const HomePage = () => {
   const checkForPosts = async () => {
     console.log("reloading the posts");
     try {
-      const resp = await fetch(`/api/post/all/${currUser.data._id}`);
+      const resp = await fetch(`/api/post/all/`);
       const result = await resp.json();
       console.log(result);
       if (result.status === "success") {
