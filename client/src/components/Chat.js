@@ -29,7 +29,14 @@ function ChatPage() {
   };
 
   useEffect(() => {
+
     ws.current = new WebSocket("ws://localhost:8080");
+
+    // var host = location.origin.replace(/^http/, "ws");
+    // this.connection = new WebSocket(host);
+    // ws.current = new WebSocket(host);
+   // ws.current = new WebSocket("wss://social-garden.herokuapp.com/");
+
 
 
     ws.current.onopen = () => {
@@ -59,20 +66,24 @@ function ChatPage() {
   }, [messages.length]);
 
   return (
-    <div className="chat-container">
-      <p>Live Chat:</p>
-      <div className="chat-messages">
-        {messages.map((message, index) => (
-          <div key={index} >
-                    {message.sender} at 
-                      {new Date(message.sentAt).toLocaleTimeString(undefined, {
-                        timeStyle: "short",
-                      })}{" "}
-                  {message.body}
-          </div>
-        ))}
-        <div ref={scrollTarget} />
-      </div>
+
+    <div>
+      <h5>Live Chat</h5>
+      <div className="chat-container">
+        <br></br>
+        <div className="chat-messages">
+          {messages.map((message, index) => (
+            <div key={index}>
+              {message.sender} at
+              {new Date(message.sentAt).toLocaleTimeString(undefined, {
+                timeStyle: "short",
+              })}{" "}
+              {message.body}
+            </div>
+          ))}
+          <div ref={scrollTarget} />
+        </div>
+
 
         {/* <p>
           You are chatting as {currUser.data.username}
@@ -82,16 +93,26 @@ function ChatPage() {
           <input
             id="message"
             type="text"
-            name= "message"
+
+            name="message"
             placeholder="Type your message here..."
             value={messageBody}
             onChange={(e) => setMessageBody(e.target.value)}
             required
           />
-          <button aria-label="Send" type="send" onClick={sendMessage} >
+
+          <br></br>
+          <br></br>
+          <Button
+            aria-label="Send"
+            type="send"
+            variant="light"
+            onClick={sendMessage}
+          >
             Send
-          </button>
+          </Button>
         </div>
+      </div>
 
     </div>
   );
