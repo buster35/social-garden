@@ -36,7 +36,7 @@ const Header = () => {
             {/* Add the activeKey code below and the rest should work  */}
             <Nav className="me-auto" activeKey={window.location.pathname}>
               <li>
-                <Nav.Link href="/login">Login Page</Nav.Link>
+                <Nav.Link href="/login">Login</Nav.Link>
               </li>
               <li>
                 <Nav.Link href="/">Home</Nav.Link>

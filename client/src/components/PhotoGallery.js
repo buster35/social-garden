@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./photoGallery.css";
 
 export default function PhotoGallery() {
   const [photos, setPhotos] = useState([]);
@@ -21,11 +22,11 @@ export default function PhotoGallery() {
   }, []);
 
   return (
-    <div>
-      <h3>PhotoGallery</h3>
+    <div className="gallery-container">
+          <br></br><h5>PhotoGallery</h5>
       {photos && photos.length > 0 ? (
         photos.map((photo) => (
-          <img key={photo._id} src={photo.photo} alt="Photo"  width={"80%"} />
+          <img className="gallery-styling" key={photo._id} src={photo.photo} alt="Photo"  width={"80%"} />
         ))
       ) : (
         <p>No Photos To Display</p>
