@@ -56,6 +56,11 @@ const PhotoUpload = () => {
           >
             Remove
           </Button>
+          {showSave ? (
+            <Button onClick={convertImage} variant="light">
+              Save
+            </Button>
+          ) : null}
         </div>
       )}
 
@@ -71,11 +76,6 @@ const PhotoUpload = () => {
           setShowSave(true);
         }}
       />
-      {showSave ? (
-        <Button onClick={convertImage} variant="light">
-          Save
-        </Button>
-      ) : null}
     </div>
   );
 };
