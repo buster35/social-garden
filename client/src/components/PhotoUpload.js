@@ -60,7 +60,6 @@ const PhotoUpload = () => {
       )}
 
       <br />
-      <br />
 
       <input
         type="file"
