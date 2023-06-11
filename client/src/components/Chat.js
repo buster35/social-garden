@@ -1,7 +1,7 @@
 import "./chat.css";
 import React, { useState, useEffect, useRef } from "react";
 import { useUserContext } from "../ctx/UserContext";
-import Button from 'react-bootstrap/Button';
+import Button from "react-bootstrap/Button";
 
 function ChatPage() {
   const [messages, setMessages] = useState([]);
@@ -28,7 +28,9 @@ function ChatPage() {
   };
 
   useEffect(() => {
-    ws.current = new WebSocket("ws://localhost:8080");
+    var host = location.origin.replace(/^http/, "ws");
+    // this.connection = new WebSocket(host);
+    ws.current = new WebSocket(host);
 
     ws.current.onopen = () => {
       console.log("Chat connection opened");
@@ -86,8 +88,15 @@ function ChatPage() {
           value={messageBody}
           onChange={(e) => setMessageBody(e.target.value)}
           required
-        /><br></br><br></br>
-        <Button aria-label="Send" type="send" variant="light" onClick={sendMessage}>
+        />
+        <br></br>
+        <br></br>
+        <Button
+          aria-label="Send"
+          type="send"
+          variant="light"
+          onClick={sendMessage}
+        >
           Send
         </Button>
       </div>
