@@ -33,7 +33,6 @@ const Header = () => {
         <div className="container-fluid" style={{ width: "65%" }}>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            {/* Add the activeKey code below and the rest should work  */}
             <Nav className="me-auto" activeKey={window.location.pathname}>
               <li>
                 <Nav.Link href="/login">Login</Nav.Link>

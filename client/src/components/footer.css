@@ -1,13 +1,16 @@
 .footer {
   color: white;
-  background-color: #132a13;
-  position: fixed;
+  background-color: #6c7d5c;
+  position: relative;
   bottom: 0;
   width: 100%;
   text-align: center;
   padding: 40px;
 }
-
-a {
-  color: black;
+.link,
+.link:hover {
+  text-decoration: none;
+}
+.link:hover {
+  color: #132a13;
 }

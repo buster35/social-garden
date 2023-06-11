@@ -1,4 +1,5 @@
 import './footer.css'
+import Alert from 'react-bootstrap/Alert'
 
 
 function Footer() {
@@ -6,13 +7,13 @@ function Footer() {
   return (
       <footer className='footer'>
       <p>A full stack MERN app built by 
-        <a href="https://potteramy.github.io/portfolio-react/"> Amy Potter, </a>
-        <a href="https://github.com/JHelton404">Jon Helton, </a>
-        <a href="https://annamarlena.github.io/react-portfolio/">Marlena Keller, </a>
-        <a href="https://github.com/morrispg">Patrick Morris, and </a>
-        <a href="https://aqueous-island-13402.herokuapp.com/">Zach Gilbert</a></p>
+        <Alert.Link className='link' variant="light" href="https://potteramy.github.io/portfolio-react/"> Amy Potter, </Alert.Link>
+        <Alert.Link className='link' variant="light" href="https://github.com/JHelton404">Jon Helton, </Alert.Link>
+        <Alert.Link className='link' variant="light" href="https://annamarlena.github.io/react-portfolio/">Marlena Keller, </Alert.Link>
+        <Alert.Link className='link' variant="light" href="https://github.com/morrispg">Patrick Morris, </Alert.Link><>and </>
+        <Alert.Link className='link' variant="light" href="https://aqueous-island-13402.herokuapp.com/">Zach Gilbert</Alert.Link></p>
       </footer>
   );
-}
+} 
 
 export default Footer
