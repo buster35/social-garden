@@ -4,7 +4,7 @@
 
 ## Description
 
-Our motivation for this project was to apply our collective strengths in order to come up with a functioning full-stack, deployed application that is built using a MERN architecture. We decided on a meeting place that may be used by garderners to connect with one another via live chat, posts, news, weather and photos related to gardening.
+Our motivation for this project was to apply our collective strengths in order to come up with a functioning full-stack & deployed application that is built using a MERN architecture. We decided on a meeting place that may be used by garderners to connect with one another via live chat, posts, news, weather and photos related to gardening.
 
 Working toward developing a minimum viable product as a team helped all of us to understand the benefits of collective programming and the collective thought processes that allow an ambitious project to spring forward in leaps and bounds. This website emulates a simple social networking site, while embodying the team's hard work.
 
@@ -34,6 +34,10 @@ If you find yourself at our site, please feel free to sign up, which will allow 
 
 ## Screenshots
 
+![LoginPage](/client/src/assets/login-screenshot.png)
+
+![HomePage](/client/src/assets/homepage-screenshot.png)
+
 ## Contributions
 
 The team that brought you Social Garden include the following people, and be sure to check out our respective repositories below: Marlena Keller, Amy Potter, Patrick Morris, Jon Helton and Zach Gilbert.
@@ -44,7 +48,7 @@ The third party assets that were used for this project include: https://github.c
 
 ## Questions
 
-Please direct any further questions to: or .
+Please direct any further questions/inquiries to:
 
 ## License
 
