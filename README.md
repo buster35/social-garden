@@ -36,7 +36,7 @@ If you find yourself at our site, please feel free to sign up, which will allow 
 
 ![LoginPage](/client/src/assets/login-screenshot.png)
 
-![HomePage](/client/src/assets/homepage-screenshot.png)
+![HomePage](/client/src/assets/homepage-screenshot-2.png)
 
 ## Contributions
 
