@@ -6,7 +6,7 @@ import Form from 'react-bootstrap/Form';
 
 function Weather() {
   const [city, setCity] = useState("");
-  const [weatherData, setWeatherData] = useState(null);
+  // const [weatherData, setWeatherData] = useState(null);
   const [forcastData, setForecastData] = useState(null)
  
 
@@ -20,7 +20,8 @@ function Weather() {
         let finalData = [response.data.list[0], response.data.list[7], response.data.list[14]];
 
         setForecastData(finalData)
-        setWeatherData(response.data);
+        // setWeatherData(response.data);
+        
       })
       .catch((error) => {
         console.log(error);
@@ -36,6 +37,8 @@ function Weather() {
 
   return (
     <div className="weather-search">
+      <h5>Three Day Forecast</h5>
+      <br></br>
       <form onSubmit={handleSubmit} onKeyUp={handleKeyUp} >
         <input
           type="text"
@@ -44,17 +47,18 @@ function Weather() {
           value={city}
           onChange={(e) => setCity(e.target.value)}
         /><br></br><br></br>
-        <Button type="submit" variant="light">Get Weather</Button>
+        <Button type="submit" variant="light">Get Weather</Button> 
       </form>
+      <br></br>
 
-      {weatherData === null ? '' : (
+      {/* {weatherData === null ? '' : (
         <div className="weather-container">
           <h1>Weather for {weatherData.city.name}</h1>
           <p>Temperature: {weatherData.list[0].main.temp} degrees</p>
           <p>Wind: {weatherData.list[0].wind.speed} mph</p>
           <p>Humidity: {weatherData.list[0].main.humidity}%</p>
         </div>
-      )}
+      )} */}
 
       {forcastData === null ? '' : forcastData.map((day, i) =>  (
         <div className="weather-container" key={i}>
@@ -62,12 +66,15 @@ function Weather() {
             <p>{day.dt_txt}</p>
           </div>
           <div className="card-body">
-            <p>wind {day.wind.speed}</p>
-            <p>humidity {day.main.humidity}</p>
-            <p>temperature {day.main.temp}</p>
-            <img src={`https://openweathermap.org/img/wn/${day.weather[0].icon}.png`} />
+          <img src={`https://openweathermap.org/img/wn/${day.weather[0].icon}.png`} />
+            <p>Wind: {day.wind.speed}mph</p>
+            <p>Humidity: {day.main.humidity}%</p>
+            <p>Temperature: {day.main.temp} &deg;F</p>
+            
           </div>
+          <br></br> <br></br>
         </div>
+        
       ))}
 
     </div>
