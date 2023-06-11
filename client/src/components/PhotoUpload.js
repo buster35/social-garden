@@ -35,8 +35,10 @@ const PhotoUpload = () => {
   };
 
   return (
-    <div className="photo-container">
+    <div>
       <h5>Photo Upload</h5>
+    <div className="photo-container">
+      
 
       {selectedImage && (
         <div>
@@ -77,6 +79,7 @@ const PhotoUpload = () => {
           }}
         />
 
+    </div>
     </div>
   );
 };
