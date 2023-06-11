@@ -48,11 +48,12 @@ const PhotoUpload = () => {
           />
           <br />
           <Button
+            variant="light"
+            style={{ marginRight: '5px' }}
             onClick={(e) => {
               setSelectedImage(null);
               setShowSave(false);
             }}
-            variant="light"
           >
             Remove
           </Button>
