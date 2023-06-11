@@ -4,14 +4,13 @@ import { useUserContext } from "../ctx/UserContext";
 import { Navbar, Nav } from "react-bootstrap";
 import gardenlogo2 from "./gardenlogo2.png";
 import socialgarden2 from "./socialgarden2.png";
-import hostas from './hostas.jpg'
+import hostas from './hostas.png'
 
 const Header = () => {
   const { currUser, logout } = useUserContext();
   console.log(window.location.pathname);
   return (
     <header className="pb-0 mb-0" style={{ borderBottom: "1px solid #333" }}>
-      {/* <section> */}
       <img
         className="gardenlogo2"
         src={gardenlogo2}
@@ -27,7 +26,6 @@ const Header = () => {
         src={hostas}
         alt="Hosta leaves covered in raindrops. Photo by Marlena Keller."
       />
-      {/* </section> */}
 
       <Navbar bg="light" expand="md" style={{ justifyContent: "space-between" }}>
         <div className="container-fluid" style={{ width: "65%" }}>
