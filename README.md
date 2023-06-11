@@ -18,8 +18,6 @@ This project provided a great deal of insight into full-stack development and de
 
 ### [Contributions](#contributions)
 
-### [Tests](#tests)
-
 ### [Questions](#questions)
 
 ### [License](#license)
@@ -35,6 +33,8 @@ If you find yourself at our site, please feel free to sign up, which will allow 
 ![LoginPage](/client/src/assets/login-screenshot.png)
 
 ![HomePage](/client/src/assets/homepage-screenshot-2.png)
+
+![ProfilePage](/client/src/assets/profile-screenshot.png)
 
 ## Contributions
 
