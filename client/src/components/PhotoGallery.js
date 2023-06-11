@@ -23,7 +23,7 @@ export default function PhotoGallery() {
 
   return (
     <div className="gallery-container">
-      <h3>PhotoGallery</h3>
+          <br></br><h5>PhotoGallery</h5>
       {photos && photos.length > 0 ? (
         photos.map((photo) => (
           <img className="gallery-styling" key={photo._id} src={photo.photo} alt="Photo"  width={"80%"} />
