@@ -41,8 +41,10 @@ const WritePost = ({ reloadPosts }) => {
   };
 
   return (
+    <div>
+<h5>Write a Post</h5>
     <div className="writePost">
-      <h5>Write a Post</h5>
+      
       <form>
         {/* <label htmlFor="writePost">Write a Post</label> */}
         <input
@@ -63,6 +65,8 @@ const WritePost = ({ reloadPosts }) => {
         </button>
       </form>
     </div>
+    </div>
+
   );
 };
 

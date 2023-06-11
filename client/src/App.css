@@ -6,7 +6,11 @@
   border: 1 px, solid #344e41;
 }
 .App-home {
-  border: 2 px, solid #344e41;
+  /* border: 2 px, solid #344e41; */
+  padding: 10px;
+}
+.Home-header {
+  padding-right: 10px;
 }
 .Home-weather {
   border: 2 px, solid #344e41;

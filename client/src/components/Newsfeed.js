@@ -30,11 +30,14 @@ function Newsfeed({ feed }) {
   // }, [currUser]);
 
   return (
-    <div className="newsfeed-container">
+    <div>
       <h5>Newsfeed</h5>
+    <div className="newsfeed-container">
+      
       {feed.map((post, index) => (
         <Post key={index} index={index} post={post} />
       ))}
+    </div>
     </div>
   );
 }
