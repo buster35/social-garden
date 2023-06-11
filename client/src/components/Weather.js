@@ -56,7 +56,7 @@ function Weather() {
       )}
 
       {forcastData === null ? '' : forcastData.map((day, i) =>  (
-        <div className="card col-2" key={i}>
+        <div className="weather-container" key={i}>
           <div className="card-title">
             <p>{day.dt_txt}</p>
           </div>
