@@ -3,7 +3,11 @@
   border: 2px solid black;
   margin-top: 20px;
   margin-bottom: 20px;
-  padding: 10px;
-  justify-content: center;
+  padding: 20px;
   width: 95%;
+  background-color: #6c7d5c;
+}
+
+#id {
+  margin: 10px;
 }

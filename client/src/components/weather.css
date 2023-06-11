@@ -3,7 +3,6 @@
   border: 2px solid black;
   margin-top: 20px;
   margin-bottom: 20px;
-  padding: 10px;
-  justify-content: center;
-  width: 95%;
+  padding: 20px;
+  background-color: #6c7d5c;
 }

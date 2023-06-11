@@ -54,7 +54,7 @@ const WritePost = ({ reloadPosts }) => {
         ></input>
         <button
           onClick={handleFormSubmit}
-          className="postButton btn btn-secondary"
+          className="postButton btn btn-light"
           type="submit"
         >
           Post

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./photoUpload.css";
 import { Convert } from "mongo-image-converter";
+import Button from 'react-bootstrap/Button';
 
 const PhotoUpload = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -39,12 +40,13 @@ const PhotoUpload = () => {
       {selectedImage && (
         <div>
           <img
+          className="photo"
             alt="not found"
-            width={"250px"}
+            width={"80%"}
             src={URL.createObjectURL(selectedImage)}
           />
           <br />
-          <button onClick={() => setSelectedImage(null)}>Remove</button>
+          <Button onClick={() => setSelectedImage(null)} variant="light">Remove</Button>
         </div>
       )}
 
@@ -59,7 +61,7 @@ const PhotoUpload = () => {
           setSelectedImage(event.target.files[0]);
         }}
       />
-      <button onClick={convertImage}>Save</button>
+      <Button onClick={convertImage} variant="light">Save</Button>
     </div>
   );
 };
