@@ -1,7 +1,7 @@
 import "./chat.css"
 import React, { useState, useEffect, useRef} from "react";
 import { useUserContext } from "../ctx/UserContext"
-
+import Button from "react-bootstrap/Button";
 
 function ChatPage() {
   const [messages, setMessages] = useState([]);
@@ -89,7 +89,7 @@ function ChatPage() {
           You are chatting as {currUser.data.username}
         </p> */}
 
-        <div className="chat-input">
+<div className="chat-input">
           <input
             id="message"
             type="text"
@@ -111,6 +111,9 @@ function ChatPage() {
           >
             Send
           </Button>
+
+          <br></br> 
+
         </div>
       </div>
 
