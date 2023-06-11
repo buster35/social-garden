@@ -65,12 +65,12 @@ const HomePage = () => {
 
             <Col
               style={{
-                backgroundColor: "##183618",
+                backgroundColor: "#132a13",
                 padding: "20px",
 
               }}
             >
-              <div className="Home-weather container">
+              <div  className="Home-weather container">
                 <Weather />
               </div>
               <div className="Home-chat">
