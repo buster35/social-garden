@@ -25,3 +25,7 @@ header {
   margin-right: 20px;
   z-index: -1;
 }
+
+.bgimage {
+  width: 100%;
+}
