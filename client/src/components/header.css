@@ -20,7 +20,8 @@ header {
 .hostas {
   max-width: 35%;
   max-height: 100%;
-  justify-content: right;
+  justify-content: flex-end;
   top: 0;
   margin-right: 20px;
+  z-index: -1;
 }
