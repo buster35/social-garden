@@ -56,7 +56,8 @@ function ChatPage() {
 
   return (
     <div className="chat-container">
-      <p>Live Chat:</p>
+      <h5>Live Chat</h5>
+      <br></br>
       <div className="chat-messages">
         {messages.map((message, index) => (
           <div key={index}>
