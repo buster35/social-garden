@@ -1,6 +1,9 @@
 .gallery-container {
   background-color: #6c7d5c;
   border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .gallery-styling {
