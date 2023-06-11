@@ -28,9 +28,10 @@ function ChatPage() {
   };
 
   useEffect(() => {
-    var host = location.origin.replace(/^http/, "ws");
+    // var host = location.origin.replace(/^http/, "ws");
     // this.connection = new WebSocket(host);
-    ws.current = new WebSocket(host);
+    // ws.current = new WebSocket(host);
+    ws.current = new WebSocket("ws://localhost:8080");
 
     ws.current.onopen = () => {
       console.log("Chat connection opened");
