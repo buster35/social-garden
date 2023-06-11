@@ -1,5 +1,6 @@
 import "./signup.css";
 import { useState } from "react";
+import Button from 'react-bootstrap/Button';
 
 const SignupPage = (props) => {
   const defForm = { username: "", email: "", password: "" };
@@ -94,9 +95,9 @@ const SignupPage = (props) => {
         </div>
 
         <div className="form-group mt-2">
-          <button className="btn btn-primary" onClick={handleFormSubmit}>
+          <Button variant="light" onClick={handleFormSubmit}>
             Sign Me Up!
-          </button>
+          </Button>
         </div>
       </form>
 

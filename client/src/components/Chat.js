@@ -1,6 +1,7 @@
 import "./chat.css";
 import React, { useState, useEffect, useRef } from "react";
 import { useUserContext } from "../ctx/UserContext";
+import Button from 'react-bootstrap/Button';
 
 function ChatPage() {
   const [messages, setMessages] = useState([]);
@@ -83,9 +84,9 @@ function ChatPage() {
           onChange={(e) => setMessageBody(e.target.value)}
           required
         />
-        <button aria-label="Send" type="send" onClick={sendMessage}>
+        <Button aria-label="Send" type="send" variant="light" onClick={sendMessage}>
           Send
-        </button>
+        </Button>
       </div>
     </div>
   );

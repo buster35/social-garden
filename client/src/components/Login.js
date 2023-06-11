@@ -1,5 +1,6 @@
 import "./login.css";
 import { useState } from "react";
+import Button from 'react-bootstrap/Button';
 
 const LoginPage = () => {
   const defForm = { email: "", password: "" };
@@ -57,9 +58,9 @@ const LoginPage = () => {
         </div>
 
         <div className="form-group mb-3 mt-2">
-          <button className="btn btn-primary" onClick={handleFormSubmit}>
+          <Button variant="light" onClick={handleFormSubmit}>
             Log Me In!
-          </button>
+          </Button>
         </div>
       </form>
 
