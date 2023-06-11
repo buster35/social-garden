@@ -98,7 +98,7 @@ function ChatPage() {
           >
             Send
           </Button>
-          <br></br>
+          <br></br> 
         </div>
 
     </div>
