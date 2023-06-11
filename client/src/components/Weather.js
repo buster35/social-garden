@@ -2,6 +2,7 @@ import "./weather.css";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 function Weather() {
   const [city, setCity] = useState("");
@@ -42,7 +43,7 @@ function Weather() {
           name="city"
           value={city}
           onChange={(e) => setCity(e.target.value)}
-        />
+        /><br></br><br></br>
         <Button type="submit" variant="light">Get Weather</Button>
       </form>
 

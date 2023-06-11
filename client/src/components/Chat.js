@@ -83,7 +83,7 @@ function ChatPage() {
           value={messageBody}
           onChange={(e) => setMessageBody(e.target.value)}
           required
-        />
+        /><br></br><br></br>
         <Button aria-label="Send" type="send" variant="light" onClick={sendMessage}>
           Send
         </Button>
