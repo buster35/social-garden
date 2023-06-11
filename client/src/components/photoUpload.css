@@ -3,9 +3,9 @@
 }
 
 .photo-container {
-  background: white;
+  background: #6c7d5c;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 40px;
   margin: 20px;
 }

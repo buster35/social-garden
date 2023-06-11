@@ -4,3 +4,18 @@
   padding: 2%;
   border: 2px solid black;
 }
+
+.writePost {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  margin: 20px;
+  border: 2px solid black;
+  background-color: #6c7d5c;
+}
+
+.postText {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}

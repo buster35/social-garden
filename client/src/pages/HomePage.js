@@ -70,7 +70,7 @@ const HomePage = () => {
 
               }}
             >
-              <div className="Home-weather container">
+              <div  className="Home-weather container">
                 <Weather />
               </div>
               <div className="Home-chat">
