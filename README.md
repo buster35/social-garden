@@ -56,7 +56,7 @@ Logo & icon artwork by Amy Potter - https://potteramy.github.io/portfolio-react/
 
 ![LoginPage](/client/src/assets/login-screenshot.png)
 
-![HomePage](/client/src/assets/homepage-screenshot-2.png)
+![HomePage](/client/src/assets/homepage-screenshot.png)
 
 ![ProfilePage](/client/src/assets/profile-screenshot.png)
 
