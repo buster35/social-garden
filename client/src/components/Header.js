@@ -2,9 +2,6 @@ import "./header.css";
 import { useState } from "react";
 import { useUserContext } from "../ctx/UserContext";
 import { Navbar, Nav } from "react-bootstrap";
-import gardenlogo2 from "./gardenlogo2.png";
-import socialgarden2 from "./socialgarden2.png";
-import hostas from './hostas.png'
 import bgimage from './bgimage.png'
 
 const Header = () => {
@@ -17,16 +14,6 @@ const Header = () => {
         src={bgimage}
         alt="Logo of a growing plant"
       />
-      {/* <img
-        className="socialgarden2"
-        src={socialgarden2}
-        alt="name of the application in cursive writing"
-      />
-      <img
-        className="hostas"
-        src={hostas}
-        alt="Hosta leaves covered in raindrops. Photo by Marlena Keller."
-      /> */}
 
       <Navbar bg="light" expand="md" style={{ justifyContent: "space-between" }}>
         <div className="container-fluid" style={{ width: "65%" }}>

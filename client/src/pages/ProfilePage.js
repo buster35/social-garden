@@ -47,7 +47,7 @@ export default function ProfilePage() {
         <Container>
           <Row>
             <Col 
-              xs={8}
+              sm={8}
               style={{
                 backgroundColor: "##183618",
                 padding: "20px",
