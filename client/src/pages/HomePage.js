@@ -46,7 +46,7 @@ const HomePage = () => {
         <Container>
           <Row>
             <Col 
-              xs={8}
+              sm={8}
               style={{
                 backgroundColor: "##183618",
                 padding: "20px",
@@ -62,7 +62,6 @@ const HomePage = () => {
                 <Newsfeed feed={newsFeed} />
               </div>
             </Col>
-
             <Col
               style={{
                 backgroundColor: "#132a13",
